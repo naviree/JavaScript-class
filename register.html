@@ -9,16 +9,20 @@
             var value = document.getElementById("userName").value;
             var message = document.getElementById("userNameMessage");
 
-            message.innerText = "";
-            for (var counter = 0; counter < value.length; counter++) {
-                var character = value.charAt(counter);
+            if (value == "") {
+                message.innerText = "Username must be one or more alphanumeric char";
+            } else {
+                message.innerText = "";
+                for (var counter = 0; counter < value.length; counter++) {
+                    var character = value.charAt(counter);
 
-                if ((character >= "a" && character <= "z")
-                    || (character >= "A" && character <= "Z")
-                    || (character >= "0" && character <= "9")) {
+                    if ((character >= "a" && character <= "z")
+                        || (character >= "A" && character <= "Z")
+                        || (character >= "0" && character <= "9")) {
 
-                } else {
-                    message.innerText = "Character '" + character + "' is invalid in the username'";
+                    } else {
+                        message.innerText = "Character '" + character + "' is invalid in the username'";
+                    }
                 }
             }
         }
