@@ -3,26 +3,31 @@
 
 <head>
     <title>User Registration</title>
-</head>
-<script>
-    function validateUserName() {
-        var value = document.getElementById("userName").value;
-        var message = document.getElementById("userNameMessage");
 
-        message.innerText = "";
-        for (var counter = 0; value.length; counter++) {
-            var character = value.charAt(counter);
+    <script>
+        function validateUserName() {
+            var value = document.getElementById("userName").value;
+            var message = document.getElementById("userNameMessage");
 
-            if (character >= "a" && character <= "z")
-                || (character >= "A" && character <= "Z")
-                    || (character >= "0" && character <= "9")
+            message.innerText = "";
+            for (var counter = 0; value.length; counter++) {
+                var character = value.charAt(counter);
+
+                if ((character >= "a" && character <= "z")
+                    || (character >= "A" && character <= "Z")
+                    || (character >= "0" && character <= "9")) {
+
+                } else {
+                    message.innerText = "Character '" + character + "' is invalid in the username'";
+                }
+            }
         }
-    }
 
-    function validatePassword() {
-        console.log("validate password.");
-    }
-</script>
+        function validatePassword() {
+            console.log("validate password.");
+        }
+    </script>
+</head>
 
 <body>
     <input type="text" id="userName" oninput="validateUserName();">
