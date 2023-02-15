@@ -6,11 +6,21 @@
 </head>
 <script>
     function validateUserName() {
+        var value = document.getElementById("userName").value;
+        var message = document.getElementById("userNameMessage");
 
+        message.innerText = "";
+        for (var counter = 0; value.length; counter++) {
+            var character = value.charAt(counter);
+
+            if (character >= "a" && character <= "z")
+                || (character >= "A" && character <= "Z")
+                    || (character >= "0" && character <= "9")
+        }
     }
 
     function validatePassword() {
-
+        console.log("validate password.");
     }
 </script>
 
