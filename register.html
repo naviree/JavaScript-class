@@ -6,12 +6,12 @@
 
     <script>
         var REQUIRED_PASSWORD_CHARACTERS = "!@~#%^&*+=";
+        var value = document.getElementById("userName").value;
+        var message = document.getElementById("userNameMessage");
+        var hasUpper = false;
+        var hasDigit = false;
+        var hasRequired = false;
         function validateUserName() {
-            var value = document.getElementById("userName").value;
-            var message = document.getElementById("userNameMessage");
-            var hasUpper = false;
-            var hasDigit = false;
-            var hasRequired = false;
 
             if (value == "") {
                 message.innerText = "Username must be one or more alphanumeric char";
