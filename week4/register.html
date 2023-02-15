@@ -7,9 +7,10 @@
     <script>
         var REQUIRED_PASSWORD_CHARACTERS = "!@~#%^&*+=";
 
-        var msg = document.getElementById(id);
+
         function setMessage(id, messageBox) {
-            message.innerText = message;
+            var messageBox = document.getElementById(id);
+            messageBox.innerText = messageBox;
         }
         function validateUserName() {
             var value = document.getElementById("userName").value;
