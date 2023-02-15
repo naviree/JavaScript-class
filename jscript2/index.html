@@ -1,0 +1,194 @@
+<html>
+
+<head>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <table style="width:80%" style="height:100%">
+        <tr>
+            <script>var value = "0.0";</script>
+            <td><script>document.write((typeof value == 'string')?'"' + value + '"':value);
+            </script></td>
+            <td><script>document.write(typeof value);</script></td>
+        </tr>
+        <tr>
+            <script>var value = 0.0;</script>
+            <td><script>document.write((typeof value == 'string')?'"' + value + '"':value);
+            </script></td>
+            <td><script>document.write(typeof value);</script></td>
+        </tr>
+        <tr>
+            <script>var value = null;</script>
+            <td><script>document.write((typeof value == 'string')?'"' + value + '"':value);
+            </script></td>
+            <td><script>document.write(typeof value);</script></td>
+        </tr>
+        <tr>
+            <script>var value = undefined;</script>
+            <td><script>document.write((typeof value == 'string')?'"' + value + '"':value);
+            </script></td>
+            <td><script>document.write(typeof value);</script></td>
+        </tr>
+        <tr>
+            <script>var value = NaN;</script> 
+            <td><script>document.write((typeof value == 'string')?'"' + value + '"':value);
+            </script></td>
+            <td><script>document.write(typeof value);</script></td>
+        </tr>
+        <tr>
+            <script>var value = console.log;</script> 
+            <td><script>document.write((typeof value == 'string')?'"' + value + '"':value);
+            </script></td>
+            <td><script>document.write(typeof value);</script></td>
+        </tr>
+        <tr>
+            <script>var value = console;</script> 
+            <td><script>document.write((typeof value == 'string')?'"' + value + '"':value);
+            </script></td>
+            <td><script>document.write(typeof value);</script></td>
+        </tr>
+        <tr>
+            <script>var value = 0 == 1;</script> 
+            <td><script>document.write((typeof value == 'string')?'"' + value + '"':value);
+            </script></td>
+            <td><script>document.write(typeof value);</script></td>
+        </tr>
+        <tr>
+            <td>document.write(2+2) </td>
+            <td><script>document.write(2 + 2);</script></td>
+        </tr>
+        <tr>
+            <td><script>document.write("||")</script> </td>
+            <td><script>document.write("Or");</script></td>
+        </tr>
+        <tr>
+            <td><script>document.write("&&")</script> </td>
+            <td><script>document.write("AND");</script></td>
+        </tr>
+        <tr>
+            <td><script>document.write("==")</script> </td>
+            <td><script>document.write("Is Equal To");</script></td>
+        </tr>
+        <tr>
+            <td><script>document.write("''2'' + ''5''")</script> </td>
+            <td><script>document.write("''25''");</script></td>
+        </tr>        <tr>
+            <td><script>document.write("''2'' + 5")</script> </td>
+            <td><script>document.write("''25''");</script></td>
+        </tr>        <tr>
+            <td><script>document.write("''2'' * '5'")</script> </td>
+            <td><script>document.write("NaN");</script></td>
+        </tr>        <tr>
+            <td><script>document.write("''2'' * 5 ")</script> </td>
+            <td><script>document.write("10");</script></td>
+        </tr>        <tr>
+            <td><script>document.write("'2' / '5'")</script> </td>
+            <td><script>document.write("NaN");</script></td>
+        </tr>        <tr>
+            <td><script>document.write("''2'' / 5")</script> </td>
+            <td><script>document.write("0.4");</script></td>
+        </tr>
+        <tr>
+            <td><script>document.write("''2'' - '5'")</script> </td>
+            <td><script>document.write("NaN");</script></td>
+        </tr>
+        <tr>
+            <td><script>document.write("''2'' - 5")</script> </td>
+            <td><script>document.write("-3");</script></td>
+        </tr>        <tr>
+            <td><script>document.write("''5'' % '2'")</script> </td>
+            <td><script>document.write("NaN");</script></td>
+        </tr>        <tr>
+            <td><script>document.write("''5'' % 2")</script> </td>
+            <td><script>document.write("1");</script></td>
+        </tr>        <tr>
+            
+            <td><script>document.write("10 + 5 % 2")</script> </td>
+            <td><script>document.write("11");</script></td>
+        </tr>        <tr>
+            <td><script>document.write("(10 + 5) % 2")</script> </td>
+            <td><script>document.write("1");</script></td>
+        </tr>        <tr>
+            <td><script>document.write("10 + 5 % 2")</script> </td>
+            <td><script>document.write("11");</script></td>
+        </tr>        <tr>
+            <td><script>document.write("10 * (5 % 2) = ")</script> </td>
+            <td><script>document.write("10");</script></td>
+        </tr>
+        <tr>
+            <td><script>document.write("0 == 1 ? ''fish'' : ''duck''")</script> </td>
+            <td><script>document.write("'duck'");</script></td>
+        </tr>        <tr>
+            <td><script>document.write("(0 == 1) ? ''fish'' : ''duck''")</script> </td>
+            <td><script>document.write("'duck'");</script></td>
+        </tr>        <tr>
+            <td><script>document.write("0 == (1 ? ''fish'' : ''duck'')")</script> </td>
+            <td><script>document.write("NaN");</script></td>
+        </tr>        <tr>
+            <td><script>document.write("0")</script> </td>
+            <td><script>document.write("falsy");</script></td>
+        </tr>        <tr>
+            <td><script>document.write("1")</script> </td>
+            <td><script>document.write("Truthy");</script></td>
+        </tr>        <tr>
+            <td><script>document.write("''0''")</script> </td>
+            <td><script>document.write("Truthy");</script></td>
+        </tr>        <tr>
+            <td><script>document.write("''1''")</script> </td>
+            <td><script>document.write("Truthy");</script></td>
+        </tr>
+        <tr>
+            <td><script>document.write("'2'")</script> </td>
+            <td><script>document.write("Truthy");</script></td>
+        </tr>        <tr>
+            <td><script>document.write("'cow'")</script> </td>
+            <td><script>document.write("Truthy");</script></td>
+        </tr>        <tr>
+            <td><script>document.write("'' ''")</script> </td>
+            <td><script>document.write("falsy");</script></td>
+        </tr>        <tr>
+            <td><script>document.write("Null")</script> </td>
+            <td><script>document.write("falsy");</script></td>
+        </tr>        <tr>
+            <td><script>document.write("undefined")</script> </td>
+            <td><script>document.write("falsy");</script></td>
+        </tr>        <tr>
+            <td><script>document.write("Nan")</script> </td>
+            <td><script>document.write("falsy");</script></td>
+        </tr>
+        <tr>
+            <td><script>document.write("infinity")</script> </td>
+            <td><script>document.write("Truthy");</script></td>
+        </tr>        <tr>
+            <td><script>document.write("[]")</script> </td>
+            <td><script>document.write("Truthy");</script></td>
+        </tr>        <tr>
+            <td><script>document.write("[0]")</script> </td>
+            <td><script>document.write("falsy");</script></td>
+        </tr>        <tr>
+            <td><script>document.write("{vegetable: ''cabage''}")</script> </td>
+            <td><script>document.write("falsy");</script></td>
+        </tr>        <tr>
+            <td><script>document.write("''dog'' || ''cat'' || ''cow''")</script> </td>
+            <td><script>document.write("''dog''");</script></td>
+        </tr>        <tr>
+            <td><script>document.write("''dog'' && ''cat'' && ''cow''")</script> </td>
+            <td><script>document.write("cow");</script></td>
+            </tr>
+    </table>
+</body>
+
+</html>
