@@ -5,9 +5,13 @@
     <title>User Registration</title>
 
     <script>
+        var REQUIRED_PASSWORD_CHARACTERS = "!@~#%^&*+=";
         function validateUserName() {
             var value = document.getElementById("userName").value;
             var message = document.getElementById("userNameMessage");
+            var hasUpper = false;
+            var hasDigit = false;
+            var hasRequired = false;
 
             if (value == "") {
                 message.innerText = "Username must be one or more alphanumeric char";
@@ -16,11 +20,9 @@
                 for (var counter = 0; counter < value.length; counter++) {
                     var character = value.charAt(counter);
 
-                    if ((character >= "a" && character <= "z")
+                    if (!((character >= "a" && character <= "z")
                         || (character >= "A" && character <= "Z")
-                        || (character >= "0" && character <= "9")) {
-
-                    } else {
+                        || (character >= "0" && character <= "9"))) {
                         message.innerText = "Character '" + character + "' is invalid in the username'";
                     }
                 }
@@ -28,7 +30,31 @@
         }
 
         function validatePassword() {
-            console.log("validate password.");
+            var value = document.getElementById("password").value;
+            var message = document.getElementById("passwordMessage");
+
+            if (value == "") {
+                message.innerText = "Password must be at least 8 characters, with at least 1 upper-case, 1 number, and 1 character from '"
+                    + REQUIRED_PASSWORD_CHARACTERS + "'.";
+            } else {
+                message.innerText = "";
+            }
+            if (value.length < 8) {
+                message.innerText = "Password must be at least 8 characters";
+                return;
+            }
+            for (var counter = 0; counter < value.length; counter++) {
+                var character = value.charAt(counter);
+
+                if (character >= "A" && character <= "Z") {
+                    hasUpper = true;
+                } else if (character >= "0" && character <= "9") {
+                    hasDigit = true;
+                } else if (REQUIRED_PASSWORD_CHARACTERS.indexOf(character) >= 0) {
+                    hasRequired = true;
+                }
+            }
+
         }
     </script>
 </head>
