@@ -5,11 +5,21 @@
     <title>User Registration</title>
 </head>
 <script>
+    function validateUserName() {
+
+    }
+
+    function validatePassword() {
+
+    }
 </script>
 
 <body>
-    <input type="text" id="userName"><br>
-    <input type="password" id="password"><br>
+    <input type="text" id="userName" oninput="validateUserName();">
+    <span id="userNameMessage" style="color: red"></span>
+    <br>
+    <input type="password" id="password" oninput="validatePassword();">
+    <span id="passwordMessage" style="color: red"></span><br>
 </body>
 
 </html>
