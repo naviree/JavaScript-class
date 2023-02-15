@@ -7,12 +7,13 @@
     <script>
         var REQUIRED_PASSWORD_CHARACTERS = "!@~#%^&*+=";
 
-        function setMessage(id, message) {
-            var msg = document.getElementById(id);
+        var msg = document.getElementById(id);
+        function setMessage(id, messageBox) {
             message.innerText = message;
         }
         function validateUserName() {
             var value = document.getElementById("userName").value;
+
             if (value == "") {
                 setMessage("userNameMessage", "Username must be one or more alphanumeric char");
             } else {
