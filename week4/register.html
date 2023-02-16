@@ -20,7 +20,7 @@
         }
 
         function isValidUsernameCharacter(character) {
-            return !isLower(character) && !isUpper(character) && !isDigit(character);
+            return isLower(character) || isUpper(character) || isDigit(character);
         }
 
         function setMessage(id, message) {
