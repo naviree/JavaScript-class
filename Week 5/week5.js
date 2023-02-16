@@ -46,6 +46,7 @@ function generateTypeTable() {
 
 function init() {
     console.log("Welcoem to week 5")
+    document.getElementById('typeTable').innerHTML = generateTypeTable();
 }
 
 window.addEventListener('load', init);
