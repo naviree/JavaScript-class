@@ -7,13 +7,33 @@
     <script>
         var REQUIRED_PASSWORD_CHARACTERS = "!@~#%^&*+=";
 
+        function isLower(character) {
+            return character >= "a" && character <= "z";
+        }
+
+        function isUpper(character) {
+            return character >= "A" && character <= "Z";
+        }
+
+        function isDigit(character) {
+            return character >= "0" && character <= "9";
+        }
+
+        function isValidUsernameCharacter(character) {
+            return !isLower(character) && !isUpper(character) && !isDigit(character);
+        }
 
         function setMessage(id, message) {
             var messageBox = document.getElementById(id);
             messageBox.innerText = message;
         }
+
+        function getInputValue(id) {
+            return document.getElementById(id).value
+        }
+
         function validateUserName() {
-            var value = document.getElementById("userName").value;
+            var value = getInputValue("userName").value;
 
             if (value == "") {
                 setMessage("userNameMessage", "Username must be one or more alphanumeric char");
@@ -22,9 +42,7 @@
                 for (var counter = 0; counter < value.length; counter++) {
                     var character = value.charAt(counter);
 
-                    if (!((character >= "a" && character <= "z")
-                        || (character >= "A" && character <= "Z")
-                        || (character >= "0" && character <= "9"))) {
+                    if (!isValidUsernameCharacter(character)) {
                         setMessage("userNameMessage", "Character '" + character + "' is invalid in the username'");
                     }
                 }
